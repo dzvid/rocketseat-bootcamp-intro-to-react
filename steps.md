@@ -199,5 +199,17 @@ PS: in case ESLint warns that jsx content should be declared in .jsx files, the 
     test: /(\.js$)/
   ```
 
-
-DONE ;) 
+10. To use css its is necessary to install css loaders for webpack:
+  ```bash
+    yarn add style-loader css-loader -D
+  ``` 
+  10.1 include loaders as a new rule in webpack.config.js:
+    ```js
+      {
+        test: /\.css$/,
+        use: [
+          { loader: 'style-loader'},
+          { loader: 'css-loader'},
+        ]
+      }
+    ```
