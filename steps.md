@@ -213,3 +213,14 @@ PS: in case ESLint warns that jsx content should be declared in .jsx files, the 
         ]
       }
     ```
+11. To use files, such as images, its is necessary to install a file loader for webpack:
+  ```bash
+    yarn add file-loader -D
+  ``` 
+  11.1 include loaders as a new rule in webpack.config.js:
+    ```js
+      {
+        test: /.*\.(gif|png|jpe?g)$/i,
+        use: { loader: 'file-loader'},
+      }
+    ```

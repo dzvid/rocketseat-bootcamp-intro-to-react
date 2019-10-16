@@ -2,8 +2,10 @@ import React from 'react';
 
 import './App.css';
 
+import smileWave from './assets/smile-and-wave.gif';
+
 function App() {
-  return <h1>Hello World!</h1>;
+  return <img src={smileWave} />;
 }
 
 export default App;
