@@ -1,7 +1,8 @@
 import React from 'react';
 
-// Stateless component, so we can use the function format
+import PropTypes from 'prop-types';
 
+// Stateless component, so we can use the function format
 function TechItem(props) {
   const { tech, onDelete } = props;
   return (
@@ -13,5 +14,12 @@ function TechItem(props) {
     </li>
   );
 }
+
+TechItem.defaultProps = { tech: 'Oculto' };
+
+TechItem.propTypes = {
+  tech: PropTypes.string,
+  onDelete: PropTypes.func.isRequired,
+};
 
 export default TechItem;

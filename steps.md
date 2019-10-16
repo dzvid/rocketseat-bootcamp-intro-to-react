@@ -235,4 +235,7 @@ PS: in case ESLint warns that jsx content should be declared in .jsx files, the 
     plugins:['@babel/plugin-proposal-class-properties']
   ```
   
-14. 
+14. To validate props, install the module:
+  ```bash
+    yarn add prop-types
+  ```
