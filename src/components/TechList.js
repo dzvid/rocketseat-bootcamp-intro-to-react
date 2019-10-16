@@ -19,12 +19,24 @@ class TechList extends Component {
     });
   };
 
+  handleDelete = tech => {
+    // TODO: Necessary to improve the method since it is not efficient[O(n)], a key value approach would be better.
+    this.setState({
+      techs: this.state.techs.filter(techInArray => techInArray !== tech),
+    });
+  };
+
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
         <ul>
           {this.state.techs.map(tech => (
-            <li key={tech}>{tech}</li>
+            <li key={tech}>
+              {tech}
+              <button type="button" onClick={() => this.handleDelete(tech)}>
+                Remover
+              </button>
+            </li>
           ))}
         </ul>
         <input
