@@ -2,10 +2,10 @@ import React from 'react';
 
 import './App.css';
 
-import smileWave from './assets/smile-and-wave.gif';
+import TechList from './components/TechList';
 
 function App() {
-  return <img src={smileWave} />;
+  return <TechList />;
 }
 
 export default App;

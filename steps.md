@@ -224,3 +224,15 @@ PS: in case ESLint warns that jsx content should be declared in .jsx files, the 
         use: { loader: 'file-loader'},
       }
     ```
+12. Create second component called TechList.js (to list all the technologies and tools learned in the bootcamp). The component is written as a class, and need to have the render() method.
+
+13. Add a new babel plugin to set a class component state directly (without using the constructor):
+  ```bash
+    yarn add @babel/plugin-proposal-class-properties -D
+  ```
+  It is necessary to add the plugin in the babel.config.js:
+  ```js
+    plugins:['@babel/plugin-proposal-class-properties']
+  ```
+  
+14. 
